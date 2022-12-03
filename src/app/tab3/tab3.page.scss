@@ -1,0 +1,46 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+ion-toolbar {
+  --background: #006bbb;
+}
+
+ion-content {
+  --background: #f5f5f5;
+  font-family: 'MiLanting';
+}
+
+ion-img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@font-face {
+  font-family: 'MiLanting';
+  src: url(/assets/milantingpro.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/assets/roboto.ttf);
+}
+
+@font-face {
+  font-family: 'GoogleSansMedium';
+  src: url(/assets/googlesansmedium.ttf);
+}
+
+.flat-card {
+  border: 1px solid #A9A9A9;
+  border-radius: 8px;
+}
+
+.blueBtn {
+  background-color: #30A0E0;
+  color: white;
+  padding: 10px;
+  font-size: medium;
+  font-family: 'MiLanting';
+  border-radius: 40px;
+}

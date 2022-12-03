@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-back-button routerLink="/tabs/tab4" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-family: 'MiLanting';">About Us</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	
+	<br>
+
+	<!-- About us Graphic & Team Logo -->
+	<div class="container">
+		<div class="col s12 m7">
+			<div class="card" style="border-radius: 8px;">
+				<div class="card-content center-align">
+					<img src="/assets/aboutus-undraw.png">
+					<img style="width: 40%; height: 40%;" src="/assets/trezlogo.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Individual developer images with description -->
+	<div class="container">
+		<div class="col s12 m7">
+			<div class="card" style="border-radius: 8px;">
+				<div class="card-content center-align">
+					<h4 style="font-family: 'MiLanting';">Our Team</h4>
+					<ion-grid>
+						<ion-row>
+							<ion-col>
+								<img src="/assets/uniqueface.jpg" class="responsiveImg" style="border-radius: 50%; height: 70%; width: 85%; border: 5px solid #dcdcdc">
+								<p>Chris John Ramirez</p>
+							</ion-col>
+							<ion-col>
+								<img src="/assets/morsface.jpg" class="responsiveImg" style="border-radius: 50%; height: 70%; width: 85%; border: 5px solid #dcdcdc">
+								<p>Euriel John Mora</p>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					<img src="/assets/rappyface.jpg" style="border-radius: 50%; height: 40%; width: 40%; border: 5px solid #dcdcdc">
+					<p>Ralph Martin Flores</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Team Mission -->
+	<div class="container">
+		<div class="col s12 m7">
+			<div class="card" style="border-radius: 8px;">
+				<div class="card-content center-align">
+					<h4 style="font-family: 'MiLanting';">Mission</h4>
+					<p style="font-size: medium;">Trez Bandidos aims to create beautiful and functional applications that will effectively
+					   solve user problems. The Trez Bandidos is a team of highly competent yet ever improving team
+					   of talented mobile and web application developers committed to producing excellent software
+					   and fostering an environment of teamwork and absolute trust.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact Us Details and Current App Details -->
+	<div class="container">
+		<div class="col s12 m7">
+			<div class="card" style="border-radius: 8px;">
+				<div class="card-content center-align">
+					<ion-grid class="flat-card">
+						<ion-row>
+							<ion-col size="2">
+								<img src="/assets/gmail.png">
+							</ion-col>
+							<ion-col>
+								<p style="font-family: 'MiLanting'; font-size: medium;">Contact us at</p>
+								<p style="font-size: medium; word-break: break-all;">trezbandidos@gmail.com</p>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+
+					<ion-grid class="flat-card" style="margin-top: 8px;">
+						<ion-row>
+							<ion-col size="2">
+								<img src="/assets/business.png">
+							</ion-col>
+							<ion-col>
+								<p style="font-family: 'MiLanting'; font-size: medium;" (click)="navEULA();">EULA</p>
+								<p style="font-size: medium; word-break: break-all;"><a routerLink="/eula" style="color: black;">View End User License Agre....</a></p>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+
+					<ion-grid class="flat-card" style="margin-top: 8px;">
+						<ion-row>
+							<ion-col size="2">
+								<img src="/assets/technology.png">
+							</ion-col>
+							<ion-col>
+								<p style="font-family: 'MiLanting'; font-size: medium;" (click)="navPrivacyPolicy();">Privacy Policy</p>
+								<p style="font-size: medium; word-break: break-all;"><a routerLink="/privacypolicy" style="color: black;">Read our Privacy Policy</a></p>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					<br>
+						<p style="color: dimgray">WeCater for Mobile</p>
+						<p style="color: dimgray">Version 1.0.0</p>
+						<p style="color: dimgray">Trez Bandidos</p>
+						<p style="color: dimgray">2020</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</ion-content>

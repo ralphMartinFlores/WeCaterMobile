@@ -1,0 +1,56 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+ion-content {
+  --background: #f5f5f5;
+}
+
+ion-toolbar {
+  --background: #006bbb;
+}
+
+.cateringButton {
+  font-family: 'RobotoMedium';
+  width: 145px;
+}
+
+ion-radio {
+  --color-checked: #30a0e0;
+}
+
+ion-label {
+  font-family: 'MiLanting';
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/assets/roboto.ttf);
+}
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url(/assets/robotomedium.ttf);
+}
+
+@font-face {
+  font-family: 'MiLanting';
+  src: url(/assets/milantingpro.ttf);
+}
+
+.flat-card {
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+}
+
+span {
+  font-family: 'MiLanting';
+}
+
+h3, p, h2 {
+  font-family: 'MiLanting';
+}
+
+ion-fab-button {
+  --background: #006bbb;
+}

@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs1/tab1" mode="md"></ion-back-button>
+          </ion-buttons>
+        <ion-title>Nearby Catering Services</ion-title> 
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div #map id="map"></div>
+    
+<div class="container">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-content center-align">
+                <img src="/assets/map.png">
+                <br>
+                <ion-list *ngFor="let place of places">
+                    <ion-item style="font-family: 'MiLanting';">
+                        <p>{{ place.name }}</p> 
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </div>
+</div>
+
+</ion-content>

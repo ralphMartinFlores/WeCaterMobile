@@ -1,0 +1,362 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-family: 'MiLanting';">Edwin's Restaurant Services</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Segment buttons to quickly navigate to different services -->
+<ion-toolbar style="--background: #f5f5f5;">
+  <ion-segment scrollable="true">
+    <ion-segment-button (click)="thirtypaxClick();"> 
+      <p><b>30 PAX</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="fortypaxClick()();">
+      <p><b>40 PAX</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="fiftypaxClick();">
+      <p><b>50 PAX</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="eightypaxClick();">
+      <p><b>80 PAX</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="hundredpaxClick();">
+      <p><b>100 PAX</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="setsClick();">
+      <p><b>Sets</b></p>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-content>
+  
+  <!-- Catering service logo with catering quotation text in a card -->
+  <div class="container">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <img src="/assets/edwinslogo.png" style="width: 40%; height: 40%; border: 3px solid black;">
+        <br>
+        <h2 style="font-family: 'MiLanting';">Catering Quotation</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Catering Service' Quotation/Offerings -->
+  <div class="container" id="30pax">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+        
+        <p style="font-size: medium;"><b>30 PAX</b></p>
+        
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/lunch.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Package A</b></p>
+          <p>Bottomless Iced Tea | Function Room | Table Cloth
+            | Seat Cover | Basic Balloon Setup | 5 ft. Balloon Pillar |
+            30 pc. Balloonderitas | 3 Hours
+          </p>
+          <p>Php 9,600.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Package B</b></p>
+          <p>Bottomless Iced Tea | Function Room | Colored Table Cloth |
+            Seat Cover with Ribbon | Buffet Skirting Color Motif | 5 ft. Balloon Pillar 
+            | 30 pc. Balloonderitas | 3 Hours |
+          </p>
+          <p>Php 10,600.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Package C</b></p>
+          <p>Bottomless Iced Tea | Function Room | Colored Table Cloth |
+            Seat Cover with Ribbon | Buffet Skirting Color motif | Sound System |
+            Full Balloon Setup with Theme | 5 ft. Balloon Pillar | 50 pc. Balloonderitas |
+            10 pc. Balloon Centerpiece | Cake Arch | Letter Balloon
+          </p>
+          <p>Php 13,000.00</p>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<div class="container" id="40pax">
+  <div class="card" style="border-radius: 8px;">
+    <div class="card-content">
+      
+      <p style="font-size: medium;"><b>40 PAX</b></p>
+      
+      <br>
+
+      <div class="center-align">
+        <img style="width: 64px; height: 64px;" src="assets/lunch.png">
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package A</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth
+          | Seat Cover | Basic Balloon Setup | 5 ft. Balloon Pillar |
+          30 pc. Balloonderitas | 3 Hours
+        </p>
+        <p>Php 10,800.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package B</b></p>
+        <p>Bottomless Iced Tea | Function Room | Colored Table Cloth |
+          Seat Cover with Ribbon | Buffet Skirting Color Motif | 5 ft. Balloon Pillar 
+          | 30 pc. Balloonderitas | 3 Hours |
+        </p>
+        <p>Php 11,800.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package C</b></p>
+        <p>Bottomless Iced Tea | Function Room | Colored Table Cloth |
+          Seat Cover with Ribbon | Buffet Skirting Color motif | Sound System |
+          Full Balloon Setup with Theme | 5 ft. Balloon Pillar | 50 pc. Balloonderitas |
+          10 pc. Balloon Centerpiece | Cake Arch | Letter Balloon | 40 pc Connecting Balloons
+        </p>
+        <p>Php 14,300.00</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="50pax">
+  <div class="card" style="border-radius: 8px;">
+    <div class="card-content">
+      
+      <p style="font-size: medium;"><b>50 PAX</b></p>
+      
+      <br>
+
+      <div class="center-align">
+        <img style="width: 64px; height: 64px;" src="assets/lunch.png">
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package A</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth
+          | Seat Cover | Basic Backdrop | Buffet Skirting | Table Skirtings |
+          Basic Sound System | Basic Balloon Setup | 5 ft. Balloon Pillar |
+          30 pc. Balloonderitas | 3 Hours
+        </p>
+        <p>Php 15,500.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package B</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth | Seat Cover |
+          Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic 
+          Sound System | Full Balloon Setup with Theme | 6 ft. Balloon Pillar |
+          4 ft. Balloon Pillar | 50 pc. Balloonderitas | Connecting Balloons |
+          Cake Arch | Letter Balloons | 10-12 Balloons | 10-12 Balloon Centerpieces |
+          3 Hours
+        </p>
+        <p>Php 19,000.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package C</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth |
+          Seat Cover | Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Sound System |
+          Full Balloon Setup with Theme | 6 ft. Balloon Pillar | 4 ft. Balloon Pillar | Connecting Balloons |
+          10-12 Balloon Centerpieces | Clown or Professional Emcee | 2 hours Photobooth with 
+          Unlimited shots and print | 50 pc. Balloonderitas | Cake Arch | Letter Balloon | 3 Hours
+        </p>
+        <p>Php 25,000.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package D</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth | Seat Cover |
+          Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic Sound System |
+          Balloon Setup with Theme | 6 ft. Balloon Pillar | 30 pc. Balloonderitas | Clown 
+          or Professional Emcee | 2 Layered Cake | 24 pcs Cupcake | 3x4 ft. Tarpaulin
+        </p>
+        <p>Php 26,000.00</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="80pax">
+  <div class="card" style="border-radius: 8px;">
+    <div class="card-content">
+      
+      <p style="font-size: medium;"><b>80 PAX</b></p>
+      
+      <br>
+
+      <div class="center-align">
+        <img style="width: 64px; height: 64px;" src="assets/lunch.png">
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package A</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth
+          | Seat Cover | Basic Backdrop | Buffet Skirting | Table Skirtings |
+          Basic Sound System | Basic Balloon Setup | 5 ft. Balloon Pillar |
+          30 pc. Balloonderitas | 3 Hours
+        </p>
+        <p>Php 21,000.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package B</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth | Seat Cover |
+          Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic 
+          Sound System | Full Balloon Setup with Theme | 6 ft. Balloon Pillar |
+          4 ft. Balloon Pillar | 50 pc. Balloonderitas | Connecting Balloons |
+          Cake Arch | Letter Balloons | 10-12 Balloons | 10-12 Balloon Centerpieces Backdrop |
+          Basic Sound System | 3 Hours |
+        </p>
+        <p>Php 24,500.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package C</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth |
+          Seat Cover | Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic Sound System |
+          Full Balloon Setup with Theme | 6 ft. Balloon Pillar | 4 ft. Balloon Pillar | Connecting Balloons |
+          10-12 Balloon Centerpieces | Clown or Professional Emcee | 2 hours Photobooth with 
+          Unlimited shots and print | 50 pc. Balloonderitas | Cake Arch | Letter Balloons | 3 Hours
+        </p>
+        <p>Php 30,500.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package D</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth | Seat Cover |
+          Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic Sound System |
+          Balloon Setup with Theme | 6 ft. Balloon Pillar | 30 pc. Balloonderitas | Clown 
+          or Professional Emcee | 2 Layered Cake | 24 pcs Cupcake | 3x4 ft. Tarpaulin
+        </p>
+        <p>Php 31,600.00</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="100px">
+  <div class="card" style="border-radius: 8px;">
+    <div class="card-content">
+      
+      <p style="font-size: medium;"><b>100 PAX</b></p>
+      
+      <br>
+
+      <div class="center-align">
+        <img style="width: 64px; height: 64px;" src="assets/lunch.png">
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package A</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth
+          | Seat Cover | Basic Backdrop | Buffet Skirting | Table Skirtings |
+          Basic Sound System | Basic Balloon Setup | 5 ft. Balloon Pillar |
+          30 pc. Balloonderitas | 3 Hours
+        </p>
+        <p>Php 25,500.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package B</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth | Seat Cover |
+          Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic 
+          Sound System | Full Balloon Setup with Theme | 6 ft. Balloon Pillar |
+          4 ft. Balloon Pillar | 50 pc. Balloonderitas | Connecting Balloons |
+          Cake Arch | Letter Balloons | 10-12 Balloons | 10-12 Balloon Centerpieces Backdrop |
+          Basic Sound System | 3 Hours |
+        </p>
+        <p>Php 29,000.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package C</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth |
+          Seat Cover | Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic Sound System |
+          Full Balloon Setup with Theme | 6 ft. Balloon Pillar | 4 ft. Balloon Pillar | Connecting Balloons |
+          10-12 Balloon Centerpieces | Clown or Professional Emcee | 2 hours Photobooth with 
+          Unlimited shots and print | 50 pc. Balloonderitas | Cake Arch | Letter Balloons | 3 Hours
+        </p>
+        <p>Php 35,000.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Package D</b></p>
+        <p>Bottomless Iced Tea | Function Room | Table Cloth | Seat Cover |
+          Colored Theme Backdrop | Buffet Skirting | Table Skirtings | Basic Sound System |
+          Balloon Setup with Theme | 6 ft. Balloon Pillar | 30 pc. Balloonderitas | Clown 
+          or Professional Emcee | 2 Layered Cake | 24 pcs Cupcake | 3x4 ft. Tarpaulin
+        </p>
+        <p>Php 36,000.00</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="sets">
+  <div class="card" style="border-radius: 8px;">
+    <div class="card-content">
+      
+      <p style="font-size: medium;"><b>Sets</b></p>
+      
+      <br>
+
+      <div class="center-align">
+        <img style="width: 64px; height: 64px;" src="assets/lunch.png">
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Reminder: </b>Edwin's Venue Only</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Set A</b></p>
+        <p>Beef, Chicken/Pork, Fish, Vegetable, Desert, Pandan Rice, Bottomless Iced Tea</p>
+        <p>Php 270.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Set B</b></p>
+        <p>Beef, Chicken, Pork, Fish, Vegetables or Noodles, Desert, Pandan Rice, Bottomless Iced Tea</p>
+        <p>Php 300.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Set C</b></p>
+        <p>Beef, Chicken, Pork, Fish, Vegetables, Noodles, Desert, Pandan Rice, Bottomless Iced Tea</p>
+        <p>Php 330.00</p>
+      </div>
+
+      <div class="outline" style="margin-top: 8px;">
+        <p style="font-size: medium;"><b>Set D</b></p>
+        <p>Beef, Chicken, Pork, Fish, Vegetables, Noodles, Vegetable Salad or Potato Salad, Soup, Desert, Pandan Rice, Bottomless Iced Tea</p>
+        <p>Php 370.00</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</ion-content>

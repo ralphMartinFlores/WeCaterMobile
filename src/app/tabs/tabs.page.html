@@ -1,0 +1,31 @@
+<ion-tabs mode="md">
+
+  <ion-tab-bar slot="bottom" mode="md">
+    
+    <!-- Home Tab -->
+    <ion-tab-button tab="tab1" mode="md" (click)="clickHomeTab()">
+      <ion-icon id="homeOnly" name="home"></ion-icon>
+      <ion-label class="animated slideInUp faster" style="font-family: 'MiLanting';" id="homeText">Home</ion-label>
+    </ion-tab-button>
+
+    <!-- My Profile Tab -->
+    <ion-tab-button tab="tab2" mode="md" (click)="clickProfileTab()">
+      <ion-icon id="personOnly" name="person-circle"></ion-icon>
+      <ion-label class="animated slideInUp faster" style="font-family: 'MiLanting';" id="profileText">Profile</ion-label>
+    </ion-tab-button>
+
+    <!-- Reviews Tab -->
+    <ion-tab-button tab="tab3" mode="md" (click)="clickReviewsTab()">
+      <ion-icon id="newsOnly" name="newspaper"></ion-icon>
+      <ion-label class="animated slideInUp faster" style="font-family: 'MiLanting';" id="reviewsText">Reviews</ion-label>
+    </ion-tab-button>
+
+    <!-- Settings Tab -->
+    <ion-tab-button tab="tab4" mode="md" (click)="clickSettingsTab()">
+      <ion-icon id="settingsOnly" name="settings"></ion-icon>
+      <ion-label class="animated slideInUp faster" style="font-family: 'MiLanting';" id="settingsText">Settings</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>

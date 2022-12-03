@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" style="color: white">
+      <ion-back-button defaultHref="/tabs/tab1" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white; font-family: 'MiLanting';">Give Your Review</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<br>
+
+<!-- Give Review Graphic  -->
+<div class="container">
+  <div class="col s12 m7">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+        <img src="/assets/givereview-undraw.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Review Form -->
+<div class="container">
+  <div class="col s12 m7">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <form [formGroup] = "reviewForm" novalidate>
+          <div class="input-field">
+            <textarea id="reviewcontent" class="materialize-textarea" formControlName="laman" [(ngModel)]="commentcontent" required></textarea>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.laman.errors?.required" style="text-align: left; color: crimson;"><b>Your review is required.</b></span>
+            <span class="error ion-padding" *ngIf="isSubmitted && errorControl.laman.errors?.minlength" style="text-align: left; color: crimson;"><b>Review must be at least 10 characters long.</b></span>
+            <label for="reviewcontent">Write your review here</label>
+          </div>
+          <a class="btn-block blueBtn" (click)="submitReview()">Submit Review</a>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</ion-content>

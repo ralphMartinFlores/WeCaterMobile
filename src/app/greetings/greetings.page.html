@@ -1,0 +1,102 @@
+<ion-content>
+  
+  <!-- Food Pattern Background -->
+  <img style="position: absolute;" src="/assets/foodie.jpeg">
+  
+  <!-- Initialization of Slides -->
+  <ion-slides pager="true" style="position: relative; top: 100px;" #greetSlides>
+
+    <!-- Slide 1 -->
+    <ion-slide>
+      <div class="container">
+        <div class="col s12 m7">
+          <div class="card" style="border-radius: 8px;">
+            <div class="card-content center-align">
+              <img style="height: 76%; width: 76%;" src="/assets/cateringservice-undraw.png">
+            </div>
+          </div>
+          <p class="flat-card"><b>Welcome to WeCater!</b> WeCater provides information you need about
+            all catering services in the city.</p>
+          <a class="btn-flat blueBtn" (click)="autoNext();" style="float: right; font-family: 'MiLanting'; border-radius: 40px;">Next</a>
+        </div>
+      </div>
+    </ion-slide>
+
+    <!-- Slide 2 -->
+    <ion-slide>
+      <div class="container">
+        <div class="col s12 m7">
+          <div class="card" style="border-radius: 8px;">
+            <div class="card-content">
+              <img style="height: 81%; width: 81%;" src="/assets/design-undraw.png">
+            </div>
+          </div>
+          <p class="flat-card"><b>Great Design!</b> WeCater is built with Material Design guidelines for a 
+            modernized look and feel.               
+          </p>
+          <a class="btn-flat blueBtn" (click)="autoNext();" style="float: right; font-family: 'MiLanting'; border-radius: 40px;">Next</a>
+        </div>
+      </div>
+    </ion-slide>
+
+    <!-- Slide 3 -->
+    <ion-slide>
+      <div class="container">
+        <div class="col s12 m7">
+          <div class="card" style="border-radius: 8px;">
+            <div class="card-content">
+              <img src="/assets/directions-undraw.png">
+            </div>
+          </div>
+          <p class="flat-card"><b>Get Directions!</b> Know the location of a certain catering service
+          or of your favorite ones.</p>
+          <a class="btn-flat blueBtn" (click)="autoNext();" style="float: right; font-family: 'MiLanting'; border-radius: 40px;">Next</a>
+        </div>
+      </div>
+    </ion-slide>
+
+    <!-- Slide 4 -->
+    <ion-slide>
+      <div class="container">
+        <div class="col s12 m7">
+          <div class="card" style="border-radius: 8px;">
+            <div class="card-content">
+              <img src="/assets/messages-undraw.png">
+            </div>
+          </div>
+          <p class="flat-card"><b>Message them!</b> Interact with catering services through their contact
+          info or their social media accounts.</p>
+          <a class="btn-flat blueBtn" (click)="autoNext();" style="float: right; font-family: 'MiLanting'; border-radius: 40px;">Next</a>
+        </div>
+      </div>
+    </ion-slide>
+
+    <!-- Slide 5 -->
+    <ion-slide>
+      <div class="container">
+        <div class="col s12 m7">
+          <div class="card" style="border-radius: 8px;">
+            <div class="card-content">
+              <img src="/assets/search-undraw (2).png">
+            </div>
+          </div>
+          <p class="flat-card"><b>Search! </b> Search through our repertoire of 
+          catering services in the city. Discover new catering services or just engage with
+          your trusted company.</p>
+          <a class="btn-block white-text" style="font-family: 'MiLanting'; border-radius: 40px; background-color: #30A0E0; padding: 10px;" routerLink="/tabs/tab1">TAKE ME TO WECATER</a>
+          <br>
+          <br>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <!-- End of Slides -->
+
+  <!-- Button to skip to homepage -->
+  <div class="container">
+    <div class="col s12 m7 center-align">
+      <a style="font-family: 'MiLanting'; position: relative; top: 80px; float: right; font-size: large; width: 100px; border-radius: 40px; background-color: #30A0E0; color: white; padding: 10px;" routerLink="/tabs/tab1">Skip</a>
+    </div>
+  </div>
+  
+</ion-content>

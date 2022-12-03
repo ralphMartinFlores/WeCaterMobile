@@ -1,0 +1,50 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar>
+    <ion-title style="text-align: center; color: white; font-family: 'MiLanting';">
+      Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<br>
+
+<!-- Settings Graphic, About Us Button and Sign out Button -->
+<div class="container">
+  <div class="col s12 m7">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+        <img src="/assets/settings-undraw.png">
+        <ion-list mode="md">
+          <ion-item>
+            <a class="flat-card btn-small btn-flat" style="border-radius: 40px;" routerLink="/aboutus" slot="end"><ion-icon style="font-size: x-large; margin-top: 2px;" name="information"></ion-icon></a>
+            <ion-label class="black-text" style="font-family: 'MiLanting';">About Us</ion-label>
+          </ion-item>
+          <br>
+          <ion-item id="signOutButton">
+            <a class="flat-card btn-small btn-flat" style="border-radius: 40px;" (click)="logoutToast()" slot="end"><ion-icon style="font-size: x-large; margin-top: 2px;" name="log-out-outline"></ion-icon></a>
+            <ion-label style="font-family: 'MiLanting';">Sign out</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register button and Sign in button in a card -->
+<div class="container">
+  <div class="col s12">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <p style="text-align: center; font-size: medium;">Don't have an account yet?</p>
+        <a routerLink="/rehistros" class="btn-block blueBtn" style="margin-top: 5px;">Sign up</a>
+        <p style="text-align: center; margin-top: 5px; font-size: medium;">or</p>
+        <p style="text-align: center; margin-top: 5px; font-size: medium;">Already have an account?</p>
+        <a class="btn-block blueBtn" style="margin-top: 5px;" (click)="loginSession();">Sign in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</ion-content>

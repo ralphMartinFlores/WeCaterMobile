@@ -1,0 +1,99 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar>
+    <ion-title style="text-align: center; color: white; font-family: 'MiLanting';">
+      My Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="md">
+
+  <br>
+  
+  <!-- Personal Info Graphic and Edit Profile Button -->
+  <div class="container">
+    <div class="card" id="ggss" style="border-radius: 8px;">
+      <div class="card-content">
+        <div class="col s12 m7">
+          <ion-img src="/assets/personalinfo-undraw.png"></ion-img>
+          <a id="updateProfile" class="btn-block center-align blueBtn" routerLink="/editaccount">Update Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Account Details -->
+  <div class="container">
+    <div class="col s12 m7">
+      <div class="card" id="default" style="border-radius: 8px;">
+        <div class="card-content">
+          <div class="flat-card center-align">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="2">
+                  <ion-icon name="person-circle" style="font-size: xx-large; color: #30a0e0; vertical-align: -25px;"></ion-icon>
+                </ion-col>
+                <ion-col>
+                  <p style="font-size: medium;">Name</p>
+                  <p style="font-size: medium;" id="name"></p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            </div>
+            <div class="flat-card center-align" style="margin-top: 7px;">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="2">
+                    <ion-icon name="at-circle" style="font-size: xx-large; color: #30a0e0; vertical-align: -25px;"></ion-icon>
+                  </ion-col>
+                  <ion-col>
+                    <p style="font-size: medium;">Username</p>
+                    <p style="font-size: medium;" id="username"></p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+            <div class="flat-card center-align" style="margin-top: 7px;">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="2">
+                    <ion-icon name="mail" style="font-size: xx-large; color: #30a0e0; vertical-align: -25px;"></ion-icon>
+                  </ion-col>
+                  <ion-col>
+                    <p style="font-size: medium;">Email</p>
+                    <p style="font-size: medium; word-break: break-all;" id="email"></p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+            <div class="flat-card center-align" style="margin-top: 7px;">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="2">
+                    <ion-icon name="call" style="font-size: xx-large; color: #30a0e0; vertical-align: -25px;"></ion-icon>
+                  </ion-col>
+                  <ion-col>
+                    <p style="font-size: medium;">Contact No.</p>
+                    <p style="font-size: medium;" id="contact"></p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card shown if no user is signed in -->
+  <div class="container">
+    <div class="card" id="empty" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <div class="col s12 m7">
+          <img src="/assets/empty-undraw.png">
+          <h4 style="color: dimgray;">Your Profile Details will appear here. <a style="color: #006BBB;" routerLink="/we-login">Sign in</a> to WeCater to see your profile.</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

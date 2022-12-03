@@ -1,0 +1,556 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-family: 'MiLanting';">Rico's Fastfood Services</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Segment buttons to quickly navigate to different services -->
+<ion-toolbar style="--background: #f5f5f5;">
+  <ion-segment scrollable="true">
+    <ion-segment-button (click)="beefclick();"> 
+      <p><b>Beef</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="porkClick();">
+      <p><b>Pork</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="chickenClick();">
+      <p><b>Chicken</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="seafoodClick();">
+      <p><b>Seafood</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="vegetablesClick();">
+      <p><b>Veggies</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="pastaClick();">
+      <p><b>Pasta</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="bilao1Click();">
+      <p><b>Bilao 1</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="bilao2Click();">
+      <p><b>Bilao 2</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="bilao3Click();">
+      <p><b>Bilao 3</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="bilao4Click();">
+      <p><b>Bilao 4</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="dessertsClick();">
+      <p><b>Desserts</b></p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="othersClick();">
+      <p><b>Others</b></p>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-content>
+  
+  <!-- Catering service logo with catering quotation text in a card -->
+  <div class="container">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <img src="/assets/ricoslogo.png" style="border: 3px solid black;">
+        <br>
+        <h2 style="font-family: 'MiLanting';">Catering Quotation</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Catering Service' Quotation/Offerings -->
+  <div class="container" id="beef">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Beef</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/beef.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Pastel De Lengua</b></p>
+          <p>Php 2,500.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Beef with Broccoli</b></p>
+          <p>Php 2,400.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Beef Stroganoff</b></p>
+          <p>Php 2,400.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Beef Mechado</b></p>
+          <p>Php 2,300.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Beef Caldereta</b></p>
+          <p>Php 2,700.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Beef Kare-Kare</b></p>
+          <p>Php 2,400.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="pork">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Pork</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/015-pork.png">
+        </div>
+
+        <div class="outline">
+          <p style="font-size: medium;"><b>Bagnet</b></p>
+          <p>Php 1,900.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Sisig</b></p>
+          <p>Php 1,900.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Liempo Barbecue</b></p>
+          <p>Php 2,300.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Ribs Afritada</b></p>
+          <p>Php 1,950.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Ribs Barbecue</b></p>
+          <p>Php 2,250.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Pork Estofado</b></p>
+          <p>Php 2,400.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Pork Pastel</b></p>
+          <p>Php 2,100.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Sweet and Sour Meatballs</b></p>
+          <p>Php 1,300.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Lumpiang Shanghai in Bilao (50 pcs)</b></p>
+          <p>Php 500.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="chicken">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Chicken</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/027-chicken.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Cordon Bleu</b></p>
+          <p>Php 2,250.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Chicken Curry</b></p>
+          <p>Php 1,550.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Chicken Pastel</b></p>
+          <p>Php 1,550.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Grilled Boneless Chicken</b></p>
+          <p>Php 1,980.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Boneless Chicken Barbecue</b></p>
+          <p>Php 1,980.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Chicken Barbecue Skewers</b></p>
+          <p>Php 750.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Chicken with Quail Eggs and Veggies</b></p>
+          <p>Php 1,550.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Special Fried Chicken with Gravy</b></p>
+          <p>Php 1,300.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="seafood">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Seafood</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/009-shrimp.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Relyenong Bangus</b></p>
+          <p>Php 1,800.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Camaron Rebosado</b></p>
+          <p>Php 2,400.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Nilasing na Hipon</b></p>
+          <p>Php 1,700.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Seafood Kare-Kare</b></p>
+          <p>Php 2,400.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Fish Fillet with Sweet and Sour / Tartar Sauce</b></p>
+          <p>Php 1,300.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="vegetables">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Vegetables</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/002-vegetables.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Chopsuey</b></p>
+          <p>Php 1,600.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Buttered Mixed Veggies</b></p>
+          <p>Php 1,000.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Garlic Mushrooms and Beans</b></p>
+          <p>Php 1,300.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Mixed Veggies with Seafood</b></p>
+          <p>Php 1,700.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Fresh Lumpiang Ubod with Sauce</b></p>
+          <p>Php 1,100.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="pasta">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Pasta</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/007-spaghetti.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Spaghetti Special</b></p>
+          <p>Php 890.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Baked Macaroni</b></p>
+          <p>Php 1,030.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Lasagna</b></p>
+          <p>Php 930.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Seafood Linguini</b></p>
+          <p>Php 1,550.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Japchae</b></p>
+          <p>Php 1,450.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Carbonara</b></p>
+          <p>Php 980.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Arroz Valenciana</b></p>
+          <p>Php 1,100.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="bilao1">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Bihon Bilao</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/007-spaghetti.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Small</b></p>
+          <p>Php 650.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Medium</b></p>
+          <p>Php 980.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Large</b></p>
+          <p>Php 1,130.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="bilao2">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Canton Bilao</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/007-spaghetti.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Small</b></p>
+          <p>Php 760.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Medium</b></p>
+          <p>Php 1,200.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Large</b></p>
+          <p>Php 1,435.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="bilao3">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Miki-Bihon Bilao</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/007-spaghetti.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Small</b></p>
+          <p>Php 650.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Medium</b></p>
+          <p>Php 980.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Large</b></p>
+          <p>Php 1,130.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="bilao4">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Palabok Bilao</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/007-spaghetti.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Small</b></p>
+          <p>Php 700.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Medium</b></p>
+          <p>Php 980.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Large</b></p>
+          <p>Php 1,280.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="desserts">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Desserts</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/foodicons/png/020-ice-cream.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Biko with Latik</b></p>
+          <p>Flavors: Ube, Pandan, Original</p>
+          <p>Php 179.00</p>
+        </div>
+
+        <div class="outline"  >
+          <p style="font-size: medium;"><b>Special Puto with Cheese</b></p>
+          <p>Flavors: Ube, Pandan, Butter</p>
+          <p>Php 319.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Yummy Jelly</b></p>
+          <p>Flavors: Ube, Pandan, Strawberry</p>
+          <p>Php 239.00</p>
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Baked Cassava Cake</b></p>
+          <p>Php 459.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="others">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content">
+
+        <p style="font-size: medium;"><b>Others</b></p>
+
+        <br>
+
+        <div class="center-align">
+          <img style="width: 64px; height: 64px;" src="assets/lunch.png">
+        </div>
+
+        <div class="outline" style="margin-top: 8px;">
+          <p style="font-size: medium;"><b>Plain Rice (20 pcs.)</b></p>
+          <p>Php 300.00</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "WeCaterMobile",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

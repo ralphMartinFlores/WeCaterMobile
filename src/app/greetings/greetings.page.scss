@@ -1,0 +1,39 @@
+.flat-card {
+    border: 1px solid #A9A9A9;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.btnflat-card {
+  border: 1px solid #A9A9A9;
+  border-radius: 8px;
+}
+
+.blueBtn {
+  background-color: #30A0E0;
+  color: white;
+}
+ 
+@font-face {
+  font-family: 'Roboto';
+  src: url(/assets/roboto.ttf);
+}
+
+@font-face {
+  font-family: 'GoogleSansMedium';
+  src: url(/assets/googlesansmedium.ttf);
+}
+
+@font-face {
+  font-family: 'MiLanting';
+  src: url(/assets/milantingpro.ttf);
+}
+
+ion-content {
+  font-family: 'MiLanting';
+}
+
+ion-slides {
+  --bullet-background: grey;;
+  --bullet-background-active: #30A0E0;
+}

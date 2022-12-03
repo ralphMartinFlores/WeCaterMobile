@@ -1,0 +1,102 @@
+<ion-header mode="md">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button style="color: white;" defaultHref="/tabs/tab4" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white; font-family: 'MiLanting';">Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <br>
+
+  <!-- Register Graphic -->
+  <div class="container">
+    <div class="col s12 m7">
+      <div class="card" style="border-radius: 8px;">
+        <div class="card-content">
+          <img src="/assets/register-undraw.png">
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <!-- Registration Form -->
+  <div class="container">
+    <div class="col s12">
+      <div class="card" style="border-radius: 8px;">
+        <div class="card-content center-align">
+          <div class="container">
+            <form class="col s12" [formGroup] = "registrationForm" novalidate>
+
+                <!-- Last Name Input Field -->
+                <div class="input-field">
+                  <input formControlName="lastname" [(ngModel)]="inputValue" id="lname" type="text" class="validate" required>
+                  <label for="lname">Last Name</label>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.lastname.errors?.required"><b>Last name is required.</b></span>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.lastname.errors?.minlength"><b>Last name should be at least 2 characters long.</b></span>
+                </div>
+                
+                <!-- First Name Input Field -->
+                <div class="input-field">
+                  <input formControlName="firstname" [(ngModel)]="inputValue2" id="fname" type="text" class="validate" required>
+                  <label for="fname">First Name</label>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.firstname.errors?.required"><b>First name is required.</b></span>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.firstname.errors?.minlength"><b>First name should be at least 2 characters long.</b></span>
+                </div>
+                
+                <!-- Email Address Input Field -->
+                <div class="input-field">
+                  <input formControlName="emailaddress" [(ngModel)]="inputValue3" id="email" type="email" class="validate" required>
+                  <label for="email">Email Address</label>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.emailaddress.errors?.required"><b>Email address is required.</b></span>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.emailaddress.errors?.pattern"><b>Please provide a valid email address.</b></span>
+                </div>
+                
+                <!-- Contact Number Input Field -->
+                <div class="input-field">
+                  <input formControlName="contactNum" [(ngModel)]="inputValue4" id="contactNum" type="text" maxLength="11" class="validate" required>
+                  <label for="contactNum">Contact Number</label>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.contactNum.errors?.required"><b>Contact number is required.</b></span>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.contactNum.errors?.pattern"><b>Please provide numerical values only.</b></span>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.contactNum.errors?.minlength"><b>Contact number should be 11 numbers long.</b></span>
+                </div>
+                
+                <!-- Username Input Field -->
+                <div class="input-field">
+                  <input formControlName="userName" [(ngModel)]="inputValue5" id="userName" type="text" class="validate" required>
+                  <label for="userName">Username</label>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.userName.errors?.required"><b>Username is required.</b></span>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.userName.errors?.minlength"><b>Username should be at least 2 characters long.</b></span>
+                </div>
+                
+                <!-- Password Input Field -->
+                <div class="input-field">
+                  <input formControlName="passWord" [(ngModel)]="inputValue6" id="passWord" type="{{type}}" class="validate" required>
+                  <label for="passWord">Password</label>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.passWord.errors?.required"><b>Password is required.</b></span>
+                  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.passWord.errors?.minlength"><b>Password should be at least 8 characters long.</b></span>
+                </div>
+
+                <div class="input-field">
+                  <p>
+                    <label>
+                      <input type="checkbox" class="filled-in validate" formControlName="checkBox" id="termsCheckBox" required (click)="termsCheck();">
+                      <span style="color: black; font-size: 16px;">I accept the terms and conditions</span>
+                      <span style="margin-top: 10px;" class="error ion-padding" *ngIf="isSubmitted && errorControl.checkBox.errors?.required" style="font-size: 14px;"><b>Please accept the terms and conditions.</b></span>
+                    </label>
+                  </p>
+                </div>
+                <!-- Show/Hide Password Button & Submit Registration Button -->
+                <a *ngIf="!showPass" class="btn-block blueBtn center-align" (click)="showPassword()">Show Password <ion-icon name="eye" style="margin-left: 3px; font-size: x-large; vertical-align: -6px;"></ion-icon></a>
+                <a *ngIf="showPass" class="btn-block center-align blueBtn" (click)="showPassword()">Hide Password <ion-icon name="eye-off" style="margin-left: 3px; font-size: x-large; vertical-align: -6px;"></ion-icon></a>
+                <a class="btn-block center-align blueBtn" type="submit" style="margin-top: 10px;" (click)="checkUsernameEmailExist();">Register</a>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</ion-content>

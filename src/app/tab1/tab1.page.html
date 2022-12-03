@@ -1,0 +1,218 @@
+<ion-header mode="md">
+  <ion-toolbar mode="md">
+          <ion-title class="center-align" style="color: white; font-family: 'MiLanting';">
+            Catering Services
+          </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="navigateNearest();">
+      <ion-icon name="location-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+<!-- Searchbar to search catering services according by name -->
+<div class="row" style="margin-top: 8px;">
+  <div class="container">
+    <div class="col s12 center-align">
+      <ion-searchbar
+          [(ngModel)]="inp"
+          (ionClear)="viewAll();" 
+          inputmode="text" 
+          placeholder="Search Catering Services" 
+          animated="true" 
+          debounce = 250
+          enterkeyhint = "enter"
+          searchIcon="hidden"
+          id="searchBar"
+          style="font-family: 'MiLanting';">
+          <ion-buttons slot="end">
+          <a class="btn-flat" style="border: 1px solid #A9A9A9; border-radius: 40px; margin-right: 8px;" (click)="searchresult(); searchEmpty();">Search</a>
+          </ion-buttons>
+      </ion-searchbar>
+    </div>
+  </div>
+</div>
+
+<!-- Card shown when no results are found -->
+<div class="row" id="noResultsCard">
+  <div class="col s12 m7">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <img src="/assets/empty.png" style="width: 128px; height: 128px;">
+        <h2>No results found.</h2>
+        <p>WeCater couldn't find what you were looking for.</p>
+        <a class="btn-flat" 
+        style="background-color: crimson; color: white; margin-top: 10px; font-family: 'MiLanting'; border-radius: 40px;" 
+        (click)="viewAll();">Go Back</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Card shown if user entered nothing in the searchbar -->
+<div class="row" id="suggestions">
+  <div class="col s12 m7">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <img src="/assets/restaurant.png">
+        <h3>It seems you did not enter something to search, try some of this keywords.</h3>
+        <ion-chip>
+          <ion-label>La'Nors</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Rico's</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Edwin's</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Los Polluelos</ion-label>
+        </ion-chip>
+        <br>
+        <a class="btn-flat" 
+        style="background-color: crimson; color: white; margin-top: 15px; font-family: 'MiLanting'; border-radius: 40px;" 
+        (click)="viewAll();">Go Back</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Catering Categories -->
+<div class="row" style="margin-top: -500px;" id="cateringCategories">
+  <div class="col s12">
+    <div class="card" style="border-radius: 8px;">
+      <div class="card-content center-align">
+        <ion-radio-group mode="md">
+          
+          <p style="font-family: 'MiLanting'; font-size: medium;">Search by Category</p>
+          <ion-item>
+            <ion-label style="font-family: 'MiLanting';">On-Premise Caterers</ion-label>
+            <ion-radio (click)="onPremise()" slot="end" mode="md"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label style="font-family: 'MiLanting';">Off-Premise Caterers</ion-label>
+            <ion-radio (click)="offPremise()" slot="end" mode="md"></ion-radio>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label style="font-family: 'MiLanting';">View All</ion-label>
+            <ion-radio (click)="viewAll()" slot="end" mode="md"></ion-radio>
+          </ion-item>
+    
+        </ion-radio-group>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- La Nor's Kitchen -->
+  <div class="row" style="margin-top: -500px;">
+    <div class="col s12">
+      <div class="card" id="lanors" style="border-radius: 8px;">
+        <div class="card-image">
+          <img src="/assets/lanorslogo.png">
+          <span class="card-title" id="lanorreview">La'Nors Kitchen</span>
+        </div>
+        <div class="card-content center-align">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" routerLink="/lanoroffers">View Services</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="lanorsMap();" style="margin-top: 5px;">Get Directions</a>
+              </ion-col>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="lanorContact();">Message Us</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="lanorReview();" style="margin-top: 5px;">Give Review</a>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rico's Fastfood Services -->
+  <div class="row" style="margin-top: -500px;">
+    <div class="col s12">
+      <div class="card" id="ricos" style="border-radius: 8px;">
+        <div class="card-image">
+          <img src="/assets/ricoslogo.png">
+          <span class="card-title">Rico's Fastfood & Restaurant</span>
+        </div>
+        <div class="card-content center-align">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" routerLink="/ricosoffers">View Services</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="ricosMap();" style="margin-top: 5px;">Get Directions</a>
+              </ion-col>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="ricosContact();">Message Us</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="ricosReview();" style="margin-top: 5px;">Give Review</a>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edwin's Restaurant -->
+  <div class="row" style="margin-top: -500px;">
+    <div class="col s12">
+      <div class="card" id="edwins" style="border-radius: 8px;">
+        <div class="card-image">
+          <img src="/assets/edwinslogo.png">
+          <span class="card-title black-text">Edwin's Restaurant</span>
+        </div>
+        <div class="card-content center-align">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" routerLink="/edwinoffers">View Services</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="edwinsMap();" style="margin-top: 5px;">Get Directions</a>
+              </ion-col>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="edwinsContact();">Message Us</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="edwinsReview();" style="margin-top: 5px;">Give Review</a>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Los Polluelos'  -->
+  <div class="row" style="margin-top: -500px;">
+    <div class="col s12">
+      <div class="card" id="lospolluelos" style="border-radius: 8px;">
+        <div class="card-image">
+          <img src="/assets/lospollogo.png">
+          <br>
+          <span class="card-title">Los Polluelos Lechon & Fastfood</span>
+        </div>
+        <div class="card-content center-align">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" routerLink="/lospoloffers">View Services</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="polluelosMap();" style="margin-top: 5px;">Get Directions</a>
+              </ion-col>
+              <ion-col>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="losPolluelosContact();">Message Us</a>
+                <a class="btn-flat flat-card black-text cateringButton" (click)="lospolReview();" style="margin-top: 5px;">Give Review</a>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

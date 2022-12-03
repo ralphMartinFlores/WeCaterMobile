@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button style="color: white" defaultHref="/tabs/tab4" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white; font-family: 'MiLanting';">Sign in</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <br>
+
+  <!-- Login Graphic and Tagline in a card -->
+  <div class="container">
+    <div class="col s12">
+      <div class="card" style="border-radius: 8px;">
+        <div class="card-content center-align">
+          <img src="/assets/login-undraw.png">
+          <img style="width: 40%; height: 40%;" src="/assets/wecaterlogo.png">
+          <h3 style="font-family: 'MiLanting'; margin-top: -20px; color: dimgray;">"Your catering needs, WeCater."</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Form -->
+  <div class="container">
+    <div class="col s12">
+      <div class="card" style="border-radius: 8px;">
+        <div class="card-content center-align">
+          <div class="container">
+            <form class="col s12" [formGroup] = "loginForm" novalidate>
+              
+                <div class="input-field">
+                  <input formControlName="username" [(ngModel)] = "inputLogid" id="uname" type="text" class="validate" required>
+                  <label for="uname">Username</label>
+                  <span class="error ion-padding" style="color: crimson;" *ngIf="isSubmitted && errorControl.username.errors?.required"><b>Username is required.</b></span>
+                </div>
+  
+              <div class="input-field">
+                <input formControlName="password" [(ngModel)] = "inputLogpass" id="pword" type="{{type}}" class="validate" autocomplete="current-password" required>
+                <label for="pword">Password</label>
+                <span class="error ion-padding" style="color: crimson; margin-bottom: 10px;" *ngIf="isSubmitted && errorControl.password.errors?.required"><b>Password is required.</b></span>
+                <a *ngIf="!showPass" class="btn-block blueBtn center-align" (click)="showPassword()" style="margin-top: 8px;">Show Password<ion-icon name="eye" style="margin-left: 5px; font-size: x-large; vertical-align: -6px;"></ion-icon></a>
+                <a *ngIf="showPass" class="btn-block blueBtn center-align" (click)="showPassword()" style="margin-top: 8px;">Hide Password<ion-icon name="eye-off" style="margin-left: 5px; font-size: x-large; vertical-align: -6px;"></ion-icon></a>
+              </div>
+            </form>
+
+            <a class="btn-block blueBtn" type="submit" style="text-align: center; margin-top: -3px;" (click)="newLogin();">Sign in</a>
+            <p class="center-align" style="margin-top: 5px; font-size: medium;">or</p>
+            <p style="text-align: center; font-size: medium; margin-top: 5px;">Don't have an account yet?</p>
+            <a routerLink="/rehistros" class="btn-block blueBtn" style="text-align: center; margin-top: 10px;">Sign up</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

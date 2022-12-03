@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'MiLanting'; color: white; text-align: center;">User Reviews</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <br>
+
+  <!-- Card shown if user is signed in, contains Reviews Graphic -->
+  <div class="container" id="reviewscard">
+    <div class="col s12 m7">
+      <div class="card" style="border-radius: 8px;">
+        <div class="card-content">
+          <img src="/assets/reviews-undraw.png">
+          <a class="btn-block center-align blueBtn" (click)="viewAll();"><ion-icon name="eye" style="font-size: x-large; margin-right: 8px; vertical-align: -5px;"></ion-icon>View All</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter reviews buttons -->
+  <div class="container" id="filterReviewsButtons">
+    <div class="col s12 m7 center-align">
+      <p style="font-size: medium; font-family: 'MiLanting';">Filter reviews by catering service' name</p>
+      <a class="btn-flat white btn-small black-text" style="border-radius: 40px; border: 1px solid #a9a9a9;" (click)="lanorRadioClick();">La'Nors Kitchen</a>
+      <a class="btn-flat white btn-small black-text" style="border-radius: 40px; margin-left: 5px; border: 1px solid #a9a9a9; margin-top: 8px;" (click)="edwinsRadioClick();">Edwin's Restaurant</a>
+      <a class="btn-flat white btn-small black-text" style="border-radius: 40px; margin-top: 8px; border: 1px solid #a9a9a9;" (click)="ricosRadioClick();">Rico's Fastfood & Restaurant</a>
+      <a class="btn-flat white btn-small black-text" style="border-radius: 40px; margin-top: 8px; border: 1px solid #a9a9a9; word-break: break-all;" (click)="losPolluelosRadioClick();">Los Polluelos Lechon & Fastfood</a>
+    </div>
+  </div>
+
+  <!-- Card shown if no user is signed in, contains Void Graphic -->
+  <div class="container" id="noreviewscard">
+    <div class="col s12 m7">
+      <div class="card" style="border-radius: 8px;">
+        <div class="card-content center-align">
+          <img src="/assets/void-undraw.png">
+          <h4 style="color: dimgray;">Reviews will appear here. <a style="color: #006bbb; font-family: 'MiLanting';" routerLink="/we-login">Sign in</a> to WeCater to see all reviews.</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col s12 m7">
+      <div class="card" style="border-radius: 8px; margin-top: 20px;" id="noreviewsSubmittedCard"> 
+        <div class="card-content center-align">
+          <img src="/assets/empty.png" style="width: 64px; height: 64px;">
+          <h4 style="color: dimgray;">No reviews have been submitted yet. Submit your own now.</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card containing the reviews -->
+  <div class="container" id="reviewscard1">
+    <div class="col s12 m7">
+      <div class="card white" *ngFor="let review of reviews" style="border-radius: 8px; margin-top: 20px;">
+        <div class="card-content" style="font-size: medium;">
+          <span style="color: dimgray">{{ review?.review_user }}</span><span style="margin-left: 5px; color: dimgray">on</span><span style="margin-left: 5px; color: dimgray;">{{ review?.review_service }}</span>
+          <p style="color: dimgray">{{ review?.review_datetime | date: 'MMM d, yyyy, h:mm a' }}</p>
+          <br>
+          <p>{{ review?.review_content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card containing filtered reviews -->
+  <div class="container" id="filterReviewsContainer">
+    <div class="col s12 m7">
+      <div class="card white" *ngFor="let filterResult of filterResults" style="border-radius: 8px; margin-top: 20px;">
+        <div class="card-content" style="font-size: medium;">
+          <span style="color: dimgray">{{ filterResult?.review_user }}</span><span style="margin-left: 5px; color: dimgray">on</span><span style="margin-left: 5px; color: dimgray;">{{ filterResult?.review_service }}</span>
+          <p style="color: dimgray">{{ filterResult?.review_datetime | date: 'MMM d, yyyy, h:mm a' }}</p>
+          <br>
+          <p>{{ filterResult?.review_content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+  
